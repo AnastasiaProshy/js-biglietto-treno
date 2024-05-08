@@ -2,14 +2,14 @@ const aKM = prompt('How many km should you travel on the train?');
 const aAGE = prompt('How old are you?');
 
 //in numeri
-const klm = Number(aKM);
+const klm = parseInt(aKM);
 const age = parseInt(aAGE);
 const PRICE = klm * 0.21;
 
 const PRICE18 = PRICE - (PRICE * 0.20);
 const PRICE65 = PRICE - (PRICE * 0.40);
 
-if (age < 18) {
+if (age <= 18) {
     console.log(PRICE18);
 } else if (age >= 65) {
     console.log(PRICE65);
